@@ -15,7 +15,7 @@
   3. Вводим в git bash:
   ```
     $ git clone https://github.com/!!!ТВОЙ_ЛОГИН!!!/EPAM
-    $ cd ProjectWork2019Neiro
+    $ cd EPAM
     $ git remote add upstream https://github.com/RazuvaevDD/EPAM
     $ git fetch upstream
     $ git checkout -b feature
