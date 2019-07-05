@@ -2,20 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="WEB/styles/style.css">
+    <link rel="icon" type="image/x-icon" href="WEB/img/favicon.ico">
     <title>EPAM</title>
     <script>
-        function addNewInput() {
-            var parent = document.getElementById("form");
-            var control = document.getElementById("control-bar");
-            
-            var el = document.createElement("input");
-            el.setAttribute("name", "film");
-            var newLine = document.createElement("br");
+	var i = 1;
 
-            parent.insertBefore(el, control);
-            parent.insertBefore(newLine, control);
+	function addNewInput() {
+		var parent = document.getElementById("form");
+		var control = document.getElementById("control-bar");
+            
+		var el = document.createElement("input");
+		el.setAttribute("name", "film"+i);
+		var newLine = document.createElement("br");
+
+		parent.insertBefore(el, control);
+		parent.insertBefore(newLine, control);
+		i=i+1;
         }
 
         function deleteLastInput() {
@@ -28,6 +31,7 @@
 
             parent.removeChild(parent.childNodes[parent.childNodes.length-3]);
             parent.removeChild(parent.childNodes[parent.childNodes.length-3]);
+		i=i-1;
         }
     </script>
 </head>
@@ -36,7 +40,7 @@
         <div class="container">
             <form id="form">
                 Enter your favorite film(s): <br>
-                <input type="text" name="film"> <br>
+                <input type="text" name="film0"> <br>
                 <div id="control-bar">
                     <button class="add-button" type="button" onclick="addNewInput()">+</button>
                     <button class="sub-button" type="button" onclick="deleteLastInput()">-</button>
@@ -45,5 +49,7 @@
             </form>    
         </div>
     </div>
+    <HR>
+    <!--META_FILMS-->
 </body>
 </html>
