@@ -22,6 +22,7 @@ public class MainPage {
 		
         return "MainPage";
     }
+
 ////////   with PathVariable (experemental)   ////////
 //	@RequestMapping(value="/{path}", method = RequestMethod.GET)
 //    public String start2(Model model, RedirectAttributes redirectAttrs,@PathVariable("path") String path,
