@@ -31,6 +31,12 @@
             parent.removeChild(parent.childNodes[parent.childNodes.length-3]);
         }
     </script>
+    
+    <style>
+		table {
+			border: solid 1px gray;
+		}
+	</style>
 </head>
 <body>
     <div class="wrapper">
@@ -43,10 +49,10 @@
                     <button class="sub-button" type="button" onclick="deleteLastInput()">-</button>
                     <button class="submit" type="submit">GO</button>
                 </div>
-            </form>    
+            </form>  
+            
+            <p th:utext="${films}" />  
         </div>
     </div>
-    <HR/>
-    <p th:text="${films}" />
 </body>
 </html>
