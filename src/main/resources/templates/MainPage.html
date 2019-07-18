@@ -49,9 +49,67 @@
                     <button class="sub-button" type="button" onclick="deleteLastInput()">-</button>
                     <button class="submit" type="submit">GO</button>
                 </div>
-            </form>  
+            </form>
             
-            <p th:utext="${films}" />  
+              
+            
+            
+            
+            
+            
+            
+            
+            
+            
+<table th:each ="film : ${films}">
+<tbody>
+<tr style="height: 1%;">
+<td style="height: 1%; width: 100%" colspan="2">
+<h1><span aria-labelledby="value"><span class="objectBox objectBox-string"><strong><em th:text="@{${film.name} + ' (' + ${film.originalName} + ')'}"/></strong></span></span></h1>
+</td>
+</tr>
+<tr style="height: 61%;">
+<td style="height: 1%; width: 497px;" colspan="2">
+<h2 style="color: #2e6c80;"><span aria-labelledby="value"><span class="objectBox objectBox-string"  th:text="${film.date}"></span></span></h2>
+</td>
+</tr>
+<tr style="height: 1%;">
+<td style="height: 1%; width: 193px;">
+<p><img  th:src="@{'https://image.tmdb.org/t/p/w200' + ${film.pictures}}" width="193" height="276"/></p>
+</td>
+<td style="height: 1%; width: 100%">
+<table style="width: 100%; height: 100%; float: left;">
+<tbody>
+<tr>
+<td>Оригинальный язык:</td>
+<td th:text="${film.originalLanguage}"/>
+</tr>
+<tr>
+<td>Описание:</td>
+<td th:text="${film.overview}"/>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         </div>
     </div>
 </body>
