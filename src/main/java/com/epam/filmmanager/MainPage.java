@@ -19,13 +19,11 @@ public class MainPage {
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String start(Model model, RedirectAttributes redirectAttrs,
-            HttpServletRequest request) {
+            HttpServletRequest request, @RequestParam(defaultValue = "") List<String> film) {
     	
-		String[] filmsQuery = request.getParameterValues("film");
-		
-		if(filmsQuery!=null) {
+		if(!film.isEmpty()) {
 			apiRepo = new ApiRepository();
-			List<Film> films =  apiRepo.findByQuery(filmsQuery[0]).getResults();
+			List<Film> films =  apiRepo.findByQuery(film.get(0)).getResults();
 			model.addAttribute("films", films);
 		}
 		
