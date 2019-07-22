@@ -15,15 +15,22 @@ import com.epam.repository.ApiRepository;
 @Controller
 public class MainPage {
 	
-	ApiRepository apiRepo;
+	private ApiRepository apiRepo;
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String start(Model model, RedirectAttributes redirectAttrs,
             HttpServletRequest request, @RequestParam(defaultValue = "") List<String> film) {
     	
-		if(!film.isEmpty()) {
-			apiRepo = new ApiRepository();
+		apiRepo = new ApiRepository();
+		
+		if(!film.isEmpty()) 
+		if(film.get(0)!=""){
+			
 			List<Film> films =  apiRepo.findByQuery(film.get(0)).getResults();
+			for(Film filmVar : films) {
+				filmVar.generateGenreString();
+			}
+			
 			model.addAttribute("films", films);
 		}
 		

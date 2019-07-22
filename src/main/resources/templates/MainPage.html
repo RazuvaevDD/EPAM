@@ -42,23 +42,14 @@
     <div class="wrapper">
         <div class="container">
             <form id="form">
-                Enter your favorite film(s): <br/>
+                Поиск: <br/>
                 <input type="text" name="film"/> <br/>
                 <div id="control-bar">
                     <button class="add-button" type="button" onclick="addNewInput()">+</button>
                     <button class="sub-button" type="button" onclick="deleteLastInput()">-</button>
-                    <button class="submit" type="submit">GO</button>
+                    <button class="submit" type="submit">Поиск</button>
                 </div>
             </form>
-            
-              
-            
-            
-            
-            
-            
-            
-            
             
             
 <table th:each ="film : ${films}">
@@ -83,6 +74,10 @@
 <tr>
 <td>Оригинальный язык:</td>
 <td th:text="${film.originalLanguage}"/>
+</tr>
+<tr>
+<td>Жанр:</td>
+<td th:text="${film.ganres}"/>
 </tr>
 <tr>
 <td>Описание:</td>
