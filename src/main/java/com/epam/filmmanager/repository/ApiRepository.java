@@ -1,6 +1,6 @@
-package com.epam.repository;
+package com.epam.filmmanager.repository;
 
-import com.epam.data.*;
+import com.epam.filmmanager.data.*;
 
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Repository;

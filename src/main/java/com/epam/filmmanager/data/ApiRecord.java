@@ -1,4 +1,4 @@
-package com.epam.data;
+package com.epam.filmmanager.data;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
