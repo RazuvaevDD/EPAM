@@ -18,21 +18,21 @@
 	 
 
 
-	<link rel="stylesheet" href="css/style.css"/>
+	
 	
 
-	<link rel="stylesheet" href="wafx_res/standard/css/normalize.css?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"/>
-	<link rel="stylesheet" href="wafx_res/standard/css/wafx-menu.css?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"/>
+	<link rel="stylesheet" href="./wafx_res/standard/css/normalize.css?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"/>
+	<link rel="stylesheet" href="./wafx_res/standard/css/wafx-menu.css?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"/>
 
-	<link rel="stylesheet" href="wafx_res/libs/blueimp/css/blueimp-gallery.min.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
-	<link rel="stylesheet" href="wafx_res/standard/multimedia/wafx-multimedia.css?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"/>
+	<link rel="stylesheet" href="./wafx_res/libs/blueimp/css/blueimp-gallery.min.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
+	<link rel="stylesheet" href="./wafx_res/standard/multimedia/wafx-multimedia.css?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"/>
 
-	<link rel="stylesheet" href="wafx_res/libs/parallax/parallax-vanilla.min.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
+	<link rel="stylesheet" href="./wafx_res/libs/parallax/parallax-vanilla.min.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
 
-	<link rel="stylesheet" href="wafx_res/libs/animate/animate.min.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
+	<link rel="stylesheet" href="./wafx_res/libs/animate/animate.min.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
 
-	<link rel="stylesheet" href="wafx_res/libs/plyr/plyr.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
-	
+	<link rel="stylesheet" href="./wafx_res/libs/plyr/plyr.css?static_res_d60468a08e6a2ff156501a258755dd9a"/>
+	<link rel="stylesheet" href="./css/style.css"/>
 
 
 	<script>
@@ -74,7 +74,7 @@ document.wafxScreenInfos =
 	<link id="waCssLink0" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i" />
 
 
-	<link rel="stylesheet" href="index.css?ad6c2ed2_ae38_4c47_b63a_42de64f67633"/>
+	<link rel="stylesheet" href="./index.css?ad6c2ed2_ae38_4c47_b63a_42de64f67633"/>
 
 	<style>
 
@@ -139,24 +139,14 @@ document.wafxScreenInfos =
 
 
 
-
-
-
-
-
-<table th:each="film : ${films}" style="width: 100%; height: 100%; float: left;">
+<table style="width: 100%; height: 100%; float: left;">
 <tbody>
 <tr style="height: 1%;">
-<td style="height: 1%; width: 100%; text-align: center;"><b><span style="font-size: x-large;"><em th:text="@{${film.name} + ' (' + ${film.originalName} + ')'}"></em></span></b></td>
+<td style="height: 1%; width: 100%; text-align: center;"><span style="font-size: x-large;">ddd</span></td>
 </tr>
 <tr style="height: 61%;">
 <td style="height: 1%; width: 100%;">&nbsp;
-<p><img th:src="@{'https://image.tmdb.org/t/p/w300' + ${film.pictures}}" style="display: block; margin-left: auto; margin-right: auto;" /></p>
-</td>
-</tr>
-<tr>
-<td style="height: 1%; width: width: 100%;">
-<h2 style="color: #2e6c80;"><span aria-labelledby="value"><span class="objectBox objectBox-string" th:text="${film.date}"></span></span></h2>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" width="218" height="311" /></p>
 </td>
 </tr>
 <tr style="height: 1%;">
@@ -164,25 +154,25 @@ document.wafxScreenInfos =
 <table style="width: 100%; height: 100%; float: left;">
 <tbody>
 <tr>
-<td style="text-align: center;"><span style="font-size: x-large;"><b>Оригинальный язык:</b></span></td>
+<td style="text-align: center;"><span style="font-size: x-large;">Оригинальный язык:</span></td>
 </tr>
 <tr>
-<td style="text-align: justify;"><span style="font-size: x-large;" th:text="${film.originalLanguage}"></span></td>
+<td style="text-align: justify;"><span style="font-size: x-large;">s</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><span style="font-size: x-large;"><b>Жанр:</b></span></td>
+<td style="text-align: center;"><span style="font-size: x-large;">Жанр:</span></td>
 </tr>
 <tr>
-<td style="text-align: justify;"><span style="font-size: x-large;" th:text="${film.ganres}"></span></td>
+<td style="text-align: justify;"><span style="font-size: x-large;">s</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><span style="font-size: x-large;"><b>Описание:</b></span></td>
+<td style="text-align: center;"><span style="font-size: x-large;">Описание:</span></td>
 </tr>
 <tr>
-<td style="text-align: justify;"><span style="font-size: x-large;" th:text="${film.overview}"></span></td>
+<td style="text-align: justify;"><span style="font-size: x-large;">ssd</span></td>
 </tr>
 <tr>
-<td style="text-align: center;"><span style="font-size: x-large;"><button class="bubbly-button">Добавить в <br/>"Найти похожее"</button></span></td>
+<td style="text-align: center;"><span style="font-size: x-large;"><button class="bubbly-button">Click me!</button></span></td>
 </tr>
 </tbody>
 </table>
@@ -211,40 +201,36 @@ document.wafxScreenInfos =
 
 
 
-<table th:each="film : ${films}">
+<table th:each ="film : ${films}">
 <tbody>
 <tr style="height: 1%;">
-<td style="height: 1%; width: 100%;" colspan="2">
-<h1><span aria-labelledby="value"><span class="objectBox objectBox-string"><strong><em th:text="@{${film.name} + ' (' + ${film.originalName} + ')'}"></em></strong></span></span></h1>
+<td style="height: 1%; width: 100%" colspan="2">
+<h1><span aria-labelledby="value"><span class="objectBox objectBox-string"><strong><em th:text="@{${film.name} + ' (' + ${film.originalName} + ')'}"/></strong></span></span></h1>
 </td>
 </tr>
 <tr style="height: 61%;">
 <td style="height: 1%; width: width: 100%;" colspan="2">
-<h2 style="color: #2e6c80;"><span aria-labelledby="value"><span class="objectBox objectBox-string" th:text="${film.date}"></span></span></h2>
+<h2 style="color: #2e6c80;"><span aria-labelledby="value"><span class="objectBox objectBox-string"  th:text="${film.date}"></span></span></h2>
 </td>
 </tr>
 <tr style="height: 1%;">
-<td style="height: 1%; width: width: 100%;" align="center">
-<p><img th:src="@{'https://image.tmdb.org/t/p/w300' + ${film.pictures}}" width="250" height="350" /></p>
+<td style="height: 1%; width: width: 100%;">
+<p><img  th:src="@{'https://image.tmdb.org/t/p/w200' + ${film.pictures}}" width="193" height="276"/></p>
 </td>
-<td style="height: 1%; width: 100%;">
+<td style="height: 1%; width: 100%">
 <table style="width: 100%; height: 100%; float: left;">
 <tbody>
 <tr>
 <td>Оригинальный язык:</td>
-<td th:text="${film.originalLanguage}"></td>
+<td th:text="${film.originalLanguage}"/>
 </tr>
 <tr>
 <td>Жанр:</td>
-<td th:text="${film.ganres}"></td>
+<td th:text="${film.ganres}"/>
 </tr>
 <tr>
 <td>Описание:</td>
-<td th:text="${film.overview}"></td>
-</tr>
-<tr>
-<td></td>
-<td style="text-align: right; "><button class="bubbly-button">Добавить в "Найти похожее"</button></td>
+<td th:text="${film.overview}"/>
 </tr>
 </tbody>
 </table>
@@ -252,7 +238,7 @@ document.wafxScreenInfos =
 </tr>
 </tbody>
 </table>
-
+<button class="bubbly-button">Click me!</button>
 
 
 
@@ -263,7 +249,7 @@ document.wafxScreenInfos =
 				</div>
 			</div>
 			
-<script  src="js/index.js"></script>
+
 <script src="wafx_res/standard/js/wafx-polyfill.js?static_res_d90e19c5ff8cd3ab263bde2fae8b4d30"></script>
 
 
@@ -342,7 +328,7 @@ wow.init();
 
 
 
-
+<script  src="js/index.js"></script>
 
 
 </body>

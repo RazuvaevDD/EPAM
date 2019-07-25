@@ -23,14 +23,11 @@ public class MainPage {
 	
 	@RequestMapping(value="/", method = RequestMethod.GET)
     public String start(Model model, RedirectAttributes redirectAttrs,
-            HttpServletRequest request, @RequestParam(defaultValue = "") List<String> film) {
+            HttpServletRequest request, @RequestParam(defaultValue = "") String search) {
     	
-		//apiRepo = new ApiRepository();
-		
-		if(!film.isEmpty()) 
-		if(film.get(0)!=""){
+		if(!search.isEmpty()){
 			
-			List<Film> films =  apiRepo.findByQuery(film.get(0)).getResults();
+			List<Film> films =  apiRepo.findByQuery(search).getResults();
 			for(Film filmVar : films) {
 				filmVar.generateGenreString();
 			}
